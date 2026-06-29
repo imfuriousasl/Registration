@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mother Registration Portal</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="overlay">
+
+        <h1>Mother Registration Portal</h1>
+        <p>Please complete the form below.</p>
+        <form action="/register" method="post">
+            <label for="name">Mother's Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">Mother's Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+            
+            <label for="weeks">Weeks Pregnant:</label>
+            <input type="number" id="weeks" name="weeks" required>
+
+            <label>Expected Delivery Date:</label>
+            <input type="date" id="delivery_date" name="delivery_date" required>
+            <label>Additional Notes:</label>
+            <textarea name="notes" rows="5"></textarea>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
